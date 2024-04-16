@@ -64,6 +64,12 @@ const CommandInterface = () => {
           border: "2px solid rgb(238, 237, 237)",
         }}
       >
+        <div className="flex items-center justify-center bg-slate-300/30 p-2 rounded-xl">
+          <h1 className="font-medium text-lg">
+            Note: Click anywhere on the screen and then press "/" to open the
+            popup
+          </h1>
+        </div>
         {showMenu && (
           <PopUpMenu
             setData={setData}
