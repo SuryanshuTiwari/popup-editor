@@ -26,9 +26,11 @@ const CommandInterface = () => {
     const isInsideSecondDiv = e.target.closest("#showPopUP") !== null;
     if (isInsideSecondDiv) {
       setMenuPosition({ x: e.clientX, y: e.clientY });
-    } else if (showMenu) {
       setShowMenu(false);
-      e.preventDefault(); // Prevent the "/" character from appearing in the input
+      if (showMenu) {
+        setShowMenu(false);
+        e.preventDefault(); // Prevent the "/" character from appearing in the input
+      }
     }
   };
 
